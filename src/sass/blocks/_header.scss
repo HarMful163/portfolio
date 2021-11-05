@@ -1,0 +1,43 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    z-index: 10;
+    transition: 0.9s;
+    padding: 40px 100px;
+    ul {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        li {
+            position: relative;
+            list-style: none;
+            a {
+                position: relative;
+                margin: 0 15px;
+                text-decoration: none;
+                color: #fff;
+                letter-spacing: 2px;
+                font-weight: bold;
+                transition: 0.6s;
+            }
+        }
+    }
+}
+.sticky {
+    padding: 5px 100px;
+    background: #fff;
+    ul {
+        li {
+            padding-top: 10px;
+            a {
+                color: #000
+            }
+        }
+    }
+}
