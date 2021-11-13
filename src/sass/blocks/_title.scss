@@ -2,8 +2,14 @@
     color: #fff;
     font-weight: bold;
     font-size: 36px;
-    line-height: 60px;    
+    line-height: 60px;  
+    &_fz12 {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 18px;
+    }  
     &_fz14 {
+        font-weight: 500;
         font-size: 14px;
         line-height: 21px;
     }
@@ -15,7 +21,17 @@
         font-size: 20px;
         line-height: 31px;
     }
+    &_fz36 {
+        font-size: 36px;
+        line-height: 60px
+    }
     &_fz48 {
         font-size: 48px;
     }
+}
+.subtitle {
+    position: relative;
+    padding-left: 10px;
+    z-index: 2;
+    @include before_circle;
 }

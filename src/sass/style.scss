@@ -15,8 +15,16 @@
     margin: 0 auto;
 }
 
+.divider {
+    width: 80px;
+    height: 0px;
+    border: 2px solid $main-color;
+    margin-bottom: 60px;
+}
+
 @import 'blocks/promo';
 @import 'blocks/title';
 @import 'blocks/btn';
 @import 'blocks/sidepanel';
 @import 'blocks/header';
+@import 'blocks/about';

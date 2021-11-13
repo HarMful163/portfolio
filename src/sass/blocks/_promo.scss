@@ -8,10 +8,6 @@
         margin-top: 10px;
     }
     &__subtitle {
-        position: relative;
-        padding-left: 10px;
-        z-index: 2;
-        @include before_circle;
         span {
             color:#013a4e;
         }
