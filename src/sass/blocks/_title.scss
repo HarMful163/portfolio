@@ -29,9 +29,3 @@
         font-size: 48px;
     }
 }
-.subtitle {
-    position: relative;
-    padding-left: 10px;
-    z-index: 2;
-    @include before_circle;
-}

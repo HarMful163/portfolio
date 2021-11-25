@@ -1,0 +1,19 @@
+.resume {
+    padding-top: 120px;
+    &__title {
+        position: relative;
+        margin: 0 auto;
+        text-align: center;
+        @include before_circle;
+        &:before {
+            content: '';
+            position: absolute;
+            left:50%;
+            margin-left:-18px; 
+        }
+    }
+    &__subtitle {
+        margin: 0 auto;
+        text-align: center;
+    }
+}
