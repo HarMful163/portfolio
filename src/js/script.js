@@ -14,7 +14,9 @@ window.addEventListener('DOMContentLoaded', function() {
           buttonExperiance = document.querySelectorAll('.header-experiance'),
           experiance = document.querySelector('#experiance'),
           buttonSkills = document.querySelectorAll('.header-skills'),
-          skills = document.querySelector('#skills');
+          skills = document.querySelector('#skills'),
+          buttonWorks = document.querySelectorAll('.header-works'),
+          works = document.querySelector('#works');
 
     function scrollTo(element) {
         window.scroll({
@@ -36,6 +38,11 @@ window.addEventListener('DOMContentLoaded', function() {
     buttonSkills.forEach(function(e) {
         e.addEventListener('click', () => {
             scrollTo(skills);
+        })
+    });
+    buttonWorks.forEach(function(e) {
+        e.addEventListener('click', () => {
+            scrollTo(works);
         })
     });
 
