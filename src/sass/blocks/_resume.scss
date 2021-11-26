@@ -6,14 +6,81 @@
         text-align: center;
         @include before_circle;
         &:before {
-            content: '';
-            position: absolute;
-            left:50%;
+            left: 50%;
             margin-left:-18px; 
         }
     }
     &__subtitle {
-        margin: 0 auto;
         text-align: center;
+    }
+    &__wrapper {
+        margin: 65px 0 0 75px;
+        display: grid;
+        grid-template-columns: repeat(2, 425px);
+        gap: 45px 135px;
+    }
+    &__column{
+        &-title {
+            position: relative;
+            padding-left: 35px;
+            &::before {
+                content: '';
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: $main-color;
+                border-radius: 100%;
+                left: -7px;
+                top: 50%;
+                transform: translateY(-50%);
+            }
+        }
+        ul {
+            list-style: none;
+            li {
+                position: relative;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 100%;
+                    top: -13px;
+                    left: 0;
+                    background-color: black;
+                }
+            }
+        }
+    }
+    &__item {
+        position: relative;
+        &:before {
+            content: '';
+            position: absolute;
+            height: 1px;
+            width: 45px;
+            background-color: #000;
+            top: 69px;
+        }
+        &-title {
+
+        }
+        &-head {
+            padding: 45px 0 0 100px;
+            position: relative;
+        }
+        &-body {
+            padding: 12px 0 0 43px;
+        }
+        &-icon {
+            position: absolute;
+            top: 50px;
+            left: 45px;
+            @include before_circle;
+            img {
+                position: absolute;
+                left: 17px;
+                top: 14px;
+            }
+        }
     }
 }

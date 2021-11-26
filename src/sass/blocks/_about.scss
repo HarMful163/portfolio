@@ -20,7 +20,6 @@
     }
     &__title {
         position: relative;
-        color: black;
         padding-left: 13px;
         @include before_circle;
     }
@@ -28,7 +27,10 @@
         color: black;
     }
     &__divider {
-        margin: 0 0 20px 0;
+        margin: 0;
+    }
+    &__text {
+        margin-top: 20px;
     }
     &__skills {
         display: grid;

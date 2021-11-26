@@ -11,7 +11,7 @@
     &__divider {
         height: 70px;
         width: 0px;
-        border: 2px solid #fff;
+        border: 2px solid $main-color;
     }
     &__text {
         height: 150px;
@@ -20,7 +20,7 @@
             transform: rotate(-90deg) translate(-30%, -260%);
             display: block;
             width: 150px;
-            color: #fff;
+            color: $main-color;
         }
     }
 }

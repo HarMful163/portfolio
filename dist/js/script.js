@@ -9,8 +9,12 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //scroll
 
-    const button = document.querySelectorAll('.header-about'),
-          about = document.querySelector('#about');
+    const buttonAbout = document.querySelectorAll('.header-about'),
+          about = document.querySelector('#about'),
+          buttonExperiance = document.querySelectorAll('.header-experiance'),
+          experiance = document.querySelector('#experiance'),
+          buttonSkills = document.querySelectorAll('.header-skills'),
+          skills = document.querySelector('#skills');
 
     function scrollTo(element) {
         window.scroll({
@@ -19,9 +23,28 @@ window.addEventListener('DOMContentLoaded', function() {
             behavior: 'smooth'
         })
     }
-    button.forEach(function(e) {
+    buttonAbout.forEach(function(e) {
         e.addEventListener('click', () => {
             scrollTo(about);
         })
+    });
+    buttonExperiance.forEach(function(e) {
+        e.addEventListener('click', () => {
+            scrollTo(experiance);
+        })
+    });
+    buttonSkills.forEach(function(e) {
+        e.addEventListener('click', () => {
+            scrollTo(skills);
+        })
+    });
+
+    //section _skills.
+
+    const counters = document.querySelectorAll('.skills__item-percent'),
+    lines = document.querySelectorAll('.skills__item-scale span');
+
+    counters.forEach( (item, i) => {
+        lines[i].style.width = item.innerHTML;
     });
 });

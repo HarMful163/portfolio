@@ -19,8 +19,7 @@
     width: 80px;
     height: 0px;
     border: 2px solid $main-color;
-    margin: 0 auto;
-    margin-top: 25px;
+    margin: 25px auto 0 auto;
 }
 
 @import 'blocks/promo';
@@ -30,3 +29,4 @@
 @import 'blocks/header';
 @import 'blocks/about';
 @import 'blocks/resume';
+@import 'blocks/skills';
