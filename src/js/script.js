@@ -16,7 +16,9 @@ window.addEventListener('DOMContentLoaded', function() {
           buttonSkills = document.querySelectorAll('.header-skills'),
           skills = document.querySelector('#skills'),
           buttonWorks = document.querySelectorAll('.header-works'),
-          works = document.querySelector('#works');
+          works = document.querySelector('#works'),
+          buttonPrice = document.querySelectorAll('.header-price'),
+          price = document.querySelector('#price');
 
     function scrollTo(element) {
         window.scroll({
@@ -45,6 +47,12 @@ window.addEventListener('DOMContentLoaded', function() {
             scrollTo(works);
         })
     });
+    buttonPrice.forEach(function(e) {
+        e.addEventListener('click', () => {
+            scrollTo(price);
+        })
+    });
+    
 
     //section _skills.
 
