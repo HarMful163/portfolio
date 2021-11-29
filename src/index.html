@@ -45,9 +45,9 @@
 </head>
 <body>
     <aside class="sidepanel">
-        <a href="#" class="sidepanel__link"><img src="icons/social/facebook.svg" alt="facebook"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/social/instagram.svg" alt="instagram"></a>
-        <a href="#" class="sidepanel__link"><img src="icons/social/github.svg" alt="github"></a>
+        <a href="https://www.facebook.com/bogomolownikita/" class="sidepanel__link"><img src="icons/social/facebook.svg" alt="facebook"></a>
+        <a href="https://www.instagram.com/nikitaharm/?hl=ru" class="sidepanel__link"><img src="icons/social/instagram.svg" alt="instagram"></a>
+        <a href="https://github.com/HarMful163" class="sidepanel__link"><img src="icons/social/github.svg" alt="github"></a>
         <div class="sidepanel__divider"></div>
         <div class="sidepanel__text"><span>Social Networks</span></div>
     </aside>
@@ -58,7 +58,7 @@
                 <li><a class="header-skills" href="#skills" onclick="return false;">My skills</a></li>
                 <li><a class="header-works" href="#works" onclick="return false;">My works</a></li>
                 <li><a class="header-price" href="#price" onclick="return false;">Price list</a></li>
-                <li><a class="header-Contacts" href="" onclick="return false;">Contacts</a></li>
+                <li><a class="header-contacts" href="#contacts" onclick="return false;">Contacts</a></li>
             </ul>
     </header>
     <section class="promo">
@@ -396,9 +396,54 @@
         </div>
     </section>
 
-    <setion class="contacts">
+    <section id="contacts" class="contacts">
+        <div class="container">
+            <div class="contacts__wrapper">
+                <div class="contacts__img">
+                    <img src="img/main_photo.jpg" alt="main_photo">
+                </div>
+                <div class="contacts__info">
+                    <h2 class="title contacts__info-title title_fz16">Контакты</h2>
+                    <h3 class="title contacts__info-subtitle title_fz36">Свяжитесь со мной</h3>
+                    <div class="divider about__divider"></div>
 
-    </setion>
+                    <div class="contacts__info-text">
+                        Любым удобным для вас способом:
+                    </div>
+                    <div class="contacts__info-icons">
+                        <a href="https://www.facebook.com/bogomolownikita/" class="contacts__info-social">
+                            <img class="deg" src="icons/social/facebook.svg" alt="facebook">
+                        </a>
+                        <a href="https://t.me/HarMful163" class="contacts__info-social">
+                            <img src="icons/social/telegram.svg" alt="telegram">
+                        </a>
+                        <a href="https://www.instagram.com/nikitaharm/?hl=ru" class="contacts__info-social">
+                            <img src="icons/social/instagram.svg" alt="instagram">
+                        </a>
+                    </div>
+                    <div class="contacts__info-text">
+                        Или оставьте ваши данные и я сама вам напишу:
+                    </div>
+                    <form action="#" class="contacts__info-form">
+                        <div class="contacts__info-input">
+                            <input name="name" id="name" type="text" placeholder="Nikita">
+                            <label for="name">Ваше имя</label>
+                        </div>
+                        <div class="contacts__info-input">
+                            <input name="email" id="email" type="email" placeholder="someone@gmail.com">
+                            <label for="email">Ваша почта</label>
+                        </div>
+                        <div class="contacts__info-textarea">
+                            <textarea name="text" id="text" placeholder="something"></textarea>
+                            <label for="text">Ваше сообщение</label>
+                        </div>
+
+                        <button class="btn contacts__info-btn">Отправить сообщение</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>

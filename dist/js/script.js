@@ -18,7 +18,9 @@ window.addEventListener('DOMContentLoaded', function() {
           buttonWorks = document.querySelectorAll('.header-works'),
           works = document.querySelector('#works'),
           buttonPrice = document.querySelectorAll('.header-price'),
-          price = document.querySelector('#price');
+          price = document.querySelector('#price'),
+          buttonContacts = document.querySelectorAll('.header-contacts'),
+          contacts = document.querySelector('#contacts');
 
     function scrollTo(element) {
         window.scroll({
@@ -47,9 +49,14 @@ window.addEventListener('DOMContentLoaded', function() {
             scrollTo(works);
         })
     });
-    buttonPrice.forEach(function(e) {
+    buttonContacts.forEach(function(e) {
         e.addEventListener('click', () => {
             scrollTo(price);
+        })
+    });
+    buttonPrice.forEach(function(e) {
+        e.addEventListener('click', () => {
+            scrollTo(contacts);
         })
     });
     
