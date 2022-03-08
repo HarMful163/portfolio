@@ -9,56 +9,29 @@ window.addEventListener('DOMContentLoaded', function() {
 
     //scroll
 
-    const buttonAbout = document.querySelectorAll('.header-about'),
-          about = document.querySelector('#about'),
-          buttonExperiance = document.querySelectorAll('.header-experiance'),
-          experiance = document.querySelector('#experiance'),
-          buttonSkills = document.querySelectorAll('.header-skills'),
-          skills = document.querySelector('#skills'),
-          buttonWorks = document.querySelectorAll('.header-works'),
-          works = document.querySelector('#works'),
-          buttonPrice = document.querySelectorAll('.header-price'),
-          price = document.querySelector('#price'),
-          buttonContacts = document.querySelectorAll('.header-contacts'),
-          contacts = document.querySelector('#contacts');
+    const menuLinks = document.querySelectorAll('[data-goto]');
 
-    function scrollTo(element) {
-        window.scroll({
-            left: 0,
-            top: element.offsetTop,
-            behavior: 'smooth'
-        })
+    if (menuLinks.length > 0) {
+        menuLinks.forEach(i => {
+            i.addEventListener('click', onMenuLinkClick);
+        });
+
+        function onMenuLinkClick(e) {
+            const menuLink = e.target;
+            console.log(menuLink);
+            if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
+                const gotoBlock = document.querySelector(menuLink.dataset.goto);
+                console.log(gotoBlock);
+                const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
+                window.scrollTo({
+                    top: gotoBlockValue,
+                    behavior: "smooth"
+                });
+                e.preventDefault();
+            }
+        }
     }
-    buttonAbout.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(about);
-        })
-    });
-    buttonExperiance.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(experiance);
-        })
-    });
-    buttonSkills.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(skills);
-        })
-    });
-    buttonWorks.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(works);
-        })
-    });
-    buttonContacts.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(contacts);
-        })
-    });
-    buttonPrice.forEach(function(e) {
-        e.addEventListener('click', () => {
-            scrollTo(price);
-        })
-    });
+    
     
 
     //_skills procents.
