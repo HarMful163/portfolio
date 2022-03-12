@@ -43,33 +43,28 @@ window.addEventListener('DOMContentLoaded', function() {
 
     const buttonOpen = document.querySelectorAll('.skills__skill-open'),
           buttonClose = document.querySelectorAll('.skills__skill-close');
+
+        function toggleClasses(skill) {
+            skill.forEach(item => {
+                item.classList.toggle('skills__skill-list-active');
+                item.classList.toggle('skills__skill-wrapper-active');
+            })
+        }
   
         buttonOpen.forEach((item, i) => {
             item.addEventListener('click', () => {
                 if(i == 0) {
-                    const html5 = document.querySelectorAll('.skills__html5');
-                    html5.forEach(item => {
-                        item.classList.toggle('skills__skill-list-active');
-                        item.classList.toggle('skills__skill-wrapper-active');
-                    })
+                    const skill = document.querySelectorAll('.skills__html5');
+                    toggleClasses(skill);
                 } if(i == 1) {
-                    const css3 = document.querySelectorAll('.skills__css3');
-                    css3.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__css3');
+                    toggleClasses(skill);
                 } if(i == 2) {
-                    const js = document.querySelectorAll('.skills__js');
-                    js.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__js');
+                    toggleClasses(skill);
                 } if(i == 3) {
-                    const figma = document.querySelectorAll('.skills__figma');
-                    figma.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__figma');
+                    toggleClasses(skill);
                 }
             });
         });
@@ -77,29 +72,17 @@ window.addEventListener('DOMContentLoaded', function() {
         buttonClose.forEach((item, i) => {
             item.addEventListener('click', () => {
                 if(i == 0) {
-                    const html5 = document.querySelectorAll('.skills__html5');
-                    html5.forEach(item => {
-                        item.classList.toggle('skills__skill-list-active');
-                        item.classList.toggle('skills__skill-wrapper-active');
-                    })
+                    const skill = document.querySelectorAll('.skills__html5');
+                    toggleClasses(skill);
                 } if(i == 1) {
-                    const css3 = document.querySelectorAll('.skills__css3');
-                    css3.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__css3');
+                    toggleClasses(skill);
                 } if(i == 2) {
-                    const js = document.querySelectorAll('.skills__js');
-                    js.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__js');
+                    toggleClasses(skill);
                 } if(i == 3) {
-                    const figma = document.querySelectorAll('.skills__figma');
-                    figma.forEach(item => {
-                        item.classList.toggle('skills__skill-wrapper-active');
-                        item.classList.toggle('skills__skill-list-active');
-                    });
+                    const skill = document.querySelectorAll('.skills__figma');
+                    toggleClasses(skill);
                 }
             });
         });
