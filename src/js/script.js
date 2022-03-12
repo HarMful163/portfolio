@@ -18,10 +18,8 @@ window.addEventListener('DOMContentLoaded', function() {
 
         function onMenuLinkClick(e) {
             const menuLink = e.target;
-            console.log(menuLink);
             if(menuLink.dataset.goto && document.querySelector(menuLink.dataset.goto)) {
                 const gotoBlock = document.querySelector(menuLink.dataset.goto);
-                console.log(gotoBlock);
                 const gotoBlockValue = gotoBlock.getBoundingClientRect().top + pageYOffset - document.querySelector('header').offsetHeight;
                 window.scrollTo({
                     top: gotoBlockValue,
@@ -31,8 +29,6 @@ window.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
-    
-    
 
     //_skills procents.
 
@@ -46,42 +42,67 @@ window.addEventListener('DOMContentLoaded', function() {
     // _skills cards
 
     const buttonOpen = document.querySelectorAll('.skills__skill-open'),
-          buttonClose = document.querySelectorAll('.skills__skill-close'),
-          skillWrapper = document.querySelectorAll('.skills__skill-wrapper'),
-          skillList = document.querySelectorAll('.skills__skill-list');
-        
-        
-
-        function showList() {
-            skillWrapper.forEach((item) => {
-                item.classList.toggle('skills__skill-wrapper-active');
+          buttonClose = document.querySelectorAll('.skills__skill-close');
+  
+        buttonOpen.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if(i == 0) {
+                    const html5 = document.querySelectorAll('.skills__html5');
+                    html5.forEach(item => {
+                        item.classList.toggle('skills__skill-list-active');
+                        item.classList.toggle('skills__skill-wrapper-active');
+                    })
+                } if(i == 1) {
+                    const css3 = document.querySelectorAll('.skills__css3');
+                    css3.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                } if(i == 2) {
+                    const js = document.querySelectorAll('.skills__js');
+                    js.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                } if(i == 3) {
+                    const figma = document.querySelectorAll('.skills__figma');
+                    figma.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                }
             });
+        });
 
-            skillList.forEach((item) => {
-                item.classList.toggle('skills__skill-list-active');
+        buttonClose.forEach((item, i) => {
+            item.addEventListener('click', () => {
+                if(i == 0) {
+                    const html5 = document.querySelectorAll('.skills__html5');
+                    html5.forEach(item => {
+                        item.classList.toggle('skills__skill-list-active');
+                        item.classList.toggle('skills__skill-wrapper-active');
+                    })
+                } if(i == 1) {
+                    const css3 = document.querySelectorAll('.skills__css3');
+                    css3.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                } if(i == 2) {
+                    const js = document.querySelectorAll('.skills__js');
+                    js.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                } if(i == 3) {
+                    const figma = document.querySelectorAll('.skills__figma');
+                    figma.forEach(item => {
+                        item.classList.toggle('skills__skill-wrapper-active');
+                        item.classList.toggle('skills__skill-list-active');
+                    });
+                }
             });
-        }
-
-        function showWrapper() {
-            skillWrapper.forEach((item) => {
-                item.classList.toggle('skills__skill-wrapper-active');
-            });
-
-            skillList.forEach((item) => {
-                item.classList.toggle('skills__skill-list-active');
-            });
-        }
-
-
-        buttonOpen.forEach((btn) => {
-            btn.addEventListener('click', showList);
-        })
-
-        buttonClose.forEach((btn) => {
-            btn.addEventListener('click', showWrapper);
-        })
-
-    
+        });
 
     //menu 
 
